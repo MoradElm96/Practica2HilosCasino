@@ -103,13 +103,14 @@ public class JuegoRuleta {
 			while (numeroApostado != lanzarRuleta()) {
 				jugadores[jugador] -= apuestaActual;
 				this.saldoBanca += apuestaActual;
+				//se multiplica la apuesta por 2 en cada vuelta de bucle
 				apuestaActual *= 2;
 				System.out.println("--------Jugador " + jugador + " aposto por " + numeroApostado
 						+ " Ha vuelto a perder!--------");
 				
 				if(jugadores[jugador]<0) {
 					System.out.println("El jugador "+ jugador + " se ha quedado sin saldo.");
-					Thread.currentThread().interrupt();//problema aqui
+				
 					break;
 				}
 

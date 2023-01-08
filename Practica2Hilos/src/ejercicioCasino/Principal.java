@@ -11,6 +11,8 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		
 		int opcion;
+		
+		//menu para elegir opciones de simulacion de  juego
 	    do {
             System.out.println("\nBienvenido al Casino de Morad . Introduce una opción: ");
             System.out.println("1. Jugar a numero concreto");
@@ -55,7 +57,7 @@ public class Principal {
 
 	}
 
-	
+	//metodo que lanza jugar a un numero concreto o primera estrategia
 	private static void lanzarJugarAunNumero(JuegoRuleta juego) {
 		HiloJugadorNumConcreto jugador1 = new HiloJugadorNumConcreto(0,juego);
 		HiloJugadorNumConcreto jugador2 = new HiloJugadorNumConcreto(1,juego);
@@ -72,7 +74,7 @@ public class Principal {
 	}
 
 	
-	
+	//metodo que lanza jugar par o impar o segunda estrategia
 	private static void lanzarJugarParImpar(JuegoRuleta juego) {
 		
 		boolean tipoApuesta = false;//inicializamos
@@ -92,7 +94,7 @@ public class Principal {
 	}
 
 	
-	
+	//metodo que implementa el modo de juego martingala
 	private static void lanzarJuegoMartingala(JuegoRuleta juego) {
 		
 		HiloJugadorMartingGala jugador1 = new HiloJugadorMartingGala(0,juego);
