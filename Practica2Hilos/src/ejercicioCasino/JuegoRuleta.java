@@ -17,7 +17,7 @@ public class JuegoRuleta {
 
 	public int lanzarRuleta() {
 
-		int numeroRuleta = this.random.nextInt(37);
+		int numeroRuleta = this.random.nextInt(37);//entre 0 y 36
 		System.out.println("CRUPIER SACA EL NUMERO   " + numeroRuleta + " DE LA RULETA");
 		return numeroRuleta;
 	}

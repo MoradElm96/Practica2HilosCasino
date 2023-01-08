@@ -19,9 +19,9 @@ public class HiloJugadorMartingGala implements Runnable {
 
 		while (true) {
 
-			// jugador elige un numero al azar
+			// jugador elige un numero al azar entre 1 y 36
 
-			int numeroQueDice = this.random.nextInt(37);
+			int numeroQueDice = this.random.nextInt(36)+1; 
 			// el jugador apuesta el numero
 
 			System.out.println(
