@@ -10,6 +10,7 @@ public class Principal {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		
 		int opcion;
 		
 		//menu para elegir opciones de simulacion de  juego
@@ -42,6 +43,8 @@ public class Principal {
                     break;
                 case 0:
                     System.out.println("Has elegido salir, hasta pronto");
+                   
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Opción no válida");
@@ -63,14 +66,19 @@ public class Principal {
 		HiloJugadorNumConcreto jugador2 = new HiloJugadorNumConcreto(1,juego);
 		HiloJugadorNumConcreto jugador3 = new HiloJugadorNumConcreto(2,juego);
 		HiloJugadorNumConcreto jugador4 = new HiloJugadorNumConcreto(3,juego);
+		
 		Thread Tjugador1 = new Thread(jugador1);
 		Thread Tjugador2 = new Thread(jugador2);
 		Thread Tjugador3 = new Thread(jugador3);
 		Thread Tjugador4 = new Thread(jugador4);
-		Tjugador1.start();
-		Tjugador2.start();
-		Tjugador3.start();
-		Tjugador4.start();
+		
+		
+		Thread[] arrayHilosJugadores = {Tjugador1,Tjugador2,Tjugador3,Tjugador4};
+		for (int i = 0; i < arrayHilosJugadores.length; i++) {
+			arrayHilosJugadores[i].start();
+		}
+		
+		
 	}
 
 	
@@ -87,12 +95,13 @@ public class Principal {
 		Thread Tjugador2 = new Thread(jugador2);
 		Thread Tjugador3 = new Thread(jugador3);
 		Thread Tjugador4 = new Thread(jugador4);
-		Tjugador1.start();
-		Tjugador2.start();
-		Tjugador3.start();
-		Tjugador4.start();
-	}
 
+		Thread[] arrayHilosJugadores = {Tjugador1,Tjugador2,Tjugador3,Tjugador4};
+		
+		for (int i = 0; i < arrayHilosJugadores.length; i++) {
+			arrayHilosJugadores[i].start();
+		}
+	}
 	
 	//metodo que implementa el modo de juego martingala
 	private static void lanzarJuegoMartingala(JuegoRuleta juego) {
@@ -105,10 +114,12 @@ public class Principal {
 		Thread Tjugador2 = new Thread(jugador2);
 		Thread Tjugador3 = new Thread(jugador3);
 		Thread Tjugador4 = new Thread(jugador4);
-		Tjugador1.start();	
-		Tjugador2.start();	
-		Tjugador3.start();	
-		Tjugador4.start();
+
+		Thread[] arrayHilosJugadores = {Tjugador1,Tjugador2,Tjugador3,Tjugador4};
+		for (int i = 0; i < arrayHilosJugadores.length; i++) {
+			arrayHilosJugadores[i].start();
+		}
+		
 	}
 
 }

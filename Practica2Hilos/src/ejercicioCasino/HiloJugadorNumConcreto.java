@@ -14,12 +14,14 @@ public class HiloJugadorNumConcreto implements Runnable{
 		this.juego=juego;
 	}
 	
-	
+
+
 	
 	@Override
 	public void run() {
-	
-		while(true) {
+		
+			
+			while(true) {
 			
 		
 				
@@ -41,6 +43,9 @@ public class HiloJugadorNumConcreto implements Runnable{
 				e.printStackTrace();
 			}
 		}
+			
+		
+		
 		
 	}
 
